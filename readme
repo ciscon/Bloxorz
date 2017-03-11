@@ -1,0 +1,31 @@
+Hello, Welcome to my bloxorz game.
+
+Instructions:
+
+1. You need to fall through the hole in the center.
+2. Do not stand upright on a green tile.
+3. The red tiles are switches that activate/de-activates bridges in the game.
+4. The scoreboard is ticking at the top-right corner.
+
+Controls:
+
+Keyboard:
+
+w - move forward
+a - move left
+s - move right
+d - move down
+w/a/s/d+space - skip a tile in that direction
+t - tower view
+p - top view
+l - level view
+b - block view
+f - follow cam view
+h - helicopter view
+
+Mouse:
+
+Left_button_click+drag - move in helicopter view
+Mouse-scroll - increase/decrease height
+
+
