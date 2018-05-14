@@ -1,7 +1,19 @@
-all: sample2D
+INCLUDES = -I /usr/include
+CXXFLAGS = -Wall ${INCLUDES}
+OBJS = bloxorz.o
+PROG = bloxorz
 
-sample2D: bloxorz.cpp
-	g++ -g -o bloxorz bloxorz.cpp -lGLEW -lglfw  -framework OpenGL -ldl
+SYS := $(shell uname -s)$
 
-clean:
-	rm sample2D
+ifeq ($(SYS),Darwin)
+	LIBS = -lGLEW -lglfw  -framework OpenGL -ldl
+else
+	LIBS            = -lGL -lglfw -lGLEW -ldl
+endif
+
+all:	$(PROG)
+
+${PROG}:	$(OBJS)
+	$(CXX) $(INCLUDES) -o $(PROG) $(OBJS) $(LIBS)
+
+clean:;	$(RM) -f $(PROG) core *.o
